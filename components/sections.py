@@ -13,8 +13,19 @@ def _chips(items: list[str]) -> str:
 
 
 def _head(kicker: str, title: str, lead: str = "") -> str:
-    lead_html = f'<p class="lead">{esc(lead)}</p>' if lead else ""
-    return f'<header class="sec-head reveal"><span class="kicker">{esc(kicker)}</span><h2>{esc(title)}</h2>{lead_html}</header>'
+    # Scroll-linked typewriter treatment for each section's supporting copy.
+    steps = max(12, min(len(lead), 88))
+    lead_html = (
+        f'<p class="lead typewrite" style="--steps:{steps}">{esc(lead)}</p>'
+        if lead else ""
+    )
+    return clean(f"""
+    <header class="sec-head reveal">
+      <span class="kicker"><i class="chapter-dot"></i>{esc(kicker)}</span>
+      <h2>{esc(title)}</h2>
+      {lead_html}
+    </header>
+    """)
 
 
 # ---------------------------------------------------------------- navigation
@@ -48,6 +59,7 @@ def hero() -> str:
     <h1 class="rise r2"><span>Muhammad</span> <span>Saad</span> <span class="grad">Ahmed</span></h1>
     <p class="subtitle rise r3">{esc(d.HERO["subtitle"])}</p>
     <p class="intro rise r4">{esc(d.HERO["intro"])}</p>
+    <div class="hero-note rise r4"><span class="note-index">01 / APPROACH</span><span>Understand the problem. Build with evidence. Keep improving.</span></div>
     <div class="btn-row rise r5">
     <a class="btn primary" href="#projects">Explore My Work {ARROW}</a>
     <a class="btn ghost" href="{d.GITHUB}" target="_blank" rel="noopener noreferrer">{GH_ICON} View GitHub</a>
@@ -76,7 +88,7 @@ def about() -> str:
     )
     return clean(f"""
     <section id="about" class="sec wrap">
-    {_head("About", d.ABOUT["title"])}
+    {_head("About", d.ABOUT["title"], "A practical path from mathematics and physics to software, data, and applied engineering.")}
     <div class="about-grid">
     <div class="prose reveal">{paras}</div>
     <div class="pillars reveal">{pillars}</div>
@@ -230,7 +242,7 @@ def experience() -> str:
         )
     return clean(f"""
     <section id="experience" class="sec wrap">
-    {_head("Experience", "Internship and technical training.")}
+    {_head("Experience", "Internship and technical training.", "Learning in teams, strengthening fundamentals, and applying ideas through practical work.")}
     <div class="timeline">{"".join(items)}</div>
     </section>
     """)
@@ -270,7 +282,7 @@ def achievements() -> str:
     beyond = "".join(f'<div><strong>{esc(a)}</strong><span>{esc(b)}</span></div>' for a, b in d.BEYOND)
     return clean(f"""
     <section id="achievements" class="sec wrap">
-    {_head("Achievements", "Work that stands up to inspection.")}
+    {_head("Achievements", "Work that stands up to inspection.", "A few milestones that reflect consistency, curiosity, and a bias toward building.")}
     <div class="grid ach-grid">{cards}</div>
     {certs}
     <h3 class="subhead reveal">Beyond engineering</h3>
@@ -290,7 +302,7 @@ def vision() -> str:
     <div class="wrap vision-in">
     <span class="kicker reveal">Engineering the Future</span>
     <h2 class="reveal">{esc(d.VISION["headline"])}</h2>
-    <p class="reveal">{esc(d.VISION["body"])}</p>
+    <p class="reveal typewrite vision-type" style="--steps:{max(12, min(len(d.VISION["body"]), 88))}">{esc(d.VISION["body"])}</p>
     <div class="threads reveal">{threads}</div>
     </div>
     </section>
@@ -315,7 +327,7 @@ def contact() -> str:
     <section id="contact" class="contact wrap">
     <div class="contact-card reveal">
     <h2>{esc(d.CONTACT["headline"])}</h2>
-    <p>{esc(d.CONTACT["text"])}</p>
+    <p class="typewrite contact-type" style="--steps:{max(12, min(len(d.CONTACT["text"]), 88))}">{esc(d.CONTACT["text"])}</p>
     <div class="btn-row center contact-actions">
     <a class="btn primary email-link" href="mailto:{d.EMAIL}" aria-label="Send an email to {d.EMAIL}"><span class="email-label">{esc(d.EMAIL)}</span>{ARROW}</a>
     <a class="btn ghost" href="{d.GITHUB}" target="_blank" rel="noopener noreferrer">{GH_ICON} GitHub</a>

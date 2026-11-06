@@ -122,3 +122,13 @@ states are provided instead), and the theme switch reloads the page.
 
 - The KRYPTA WebP logo is bundled in `assets/krypta-logo.webp` and is displayed in the flagship project panel.
 - Fiverr's portfolio gallery did not expose its individual project entries to public retrieval during this update. The Fiverr profile link is included, but individual Fiverr case studies and thumbnails must be added from screenshots or exported project details supplied by the account owner.
+
+
+## Executive Scroll Edition (November 2026)
+
+- Refined the visual direction toward an executive technology profile: editorial typography, deliberate spacing, and restrained futuristic detail.
+- Added scroll-linked typewriter reveals to section introductions and the future-facing narrative, plus a subtle page-progress indicator.
+- Added a concise approach statement below the hero introduction.
+- Preserved both themes, responsive layouts, the KRYPTA flagship case study and logo, Tadabbur AI, project live-demo links, and clickable email contact.
+- The earlier Karachi-infrastructure-intelligence / Karachi Pulse repository remains excluded; KRYPTA is the current flagship project.
+- Motion respects the visitor's reduced-motion accessibility preference.

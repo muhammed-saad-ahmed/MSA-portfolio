@@ -27,9 +27,9 @@ NAV = [
 
 HERO = {
     "eyebrow": "ENGINEERING • TECHNOLOGY • INNOVATION",
-    "subtitle": "Building practical technology. Exploring the future of engineering.",
+    "subtitle": "Engineering-minded thinking. Practical software. A future-facing perspective.",
     "intro": (
-        "I'm a technology-focused developer and aspiring aerospace engineer, passionate about "
+        "I'm a technology-focused developer and aspiring aerospace engineer, focused on "
         "turning complex ideas into practical, accessible solutions across software, AI, "
         "data engineering and applied science."
     ),
