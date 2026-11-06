@@ -81,7 +81,7 @@ def hero() -> str:
 
 # ---------------------------------------------------------------- about
 def about() -> str:
-    paras = "".join(f"<p>{esc(p)}</p>" for p in d.ABOUT["paragraphs"])
+    paras = "".join(f'<p class="typewrite" style="--steps:{max(12, min(len(p), 88))}">{esc(p)}</p>' for p in d.ABOUT["paragraphs"])
     pillars = "".join(
         f'<div class="pillar"><span class="num">0{i}</span><h3>{esc(t)}</h3><p>{esc(s)}</p></div>'
         for i, (t, s) in enumerate(d.ABOUT["pillars"], 1)
@@ -164,7 +164,7 @@ def _flagship() -> str:
     <span class="badge">{esc(k["badge"])}</span>
     <h3 id="krypta-title">{esc(k["name"])}</h3>
     <p class="fullname">{esc(k["full"])}</p>
-    <p class="summary">{esc(k["summary"])}</p>
+    <p class="summary typewrite" style="--steps:{max(12, min(len(k['summary']), 88))}">{esc(k["summary"])}</p>
     <div class="ps">
     <div><h4>Problem</h4><p>{esc(k["problem"])}</p></div>
     <div><h4>Approach</h4><p>{esc(k["solution"])}</p></div>
@@ -193,7 +193,7 @@ def _project(p: dict, flip: bool) -> str:
     <div class="p-body">
     <span class="badge soft">{esc(p["tag"])}</span>
     <h3>{esc(p["name"])}</h3>
-    <p class="summary">{esc(p["summary"])}</p>
+    <p class="summary typewrite" style="--steps:{max(12, min(len(p['summary']), 88))}">{esc(p["summary"])}</p>
     <div class="ps">
     <div><h4>Problem</h4><p>{esc(p["problem"])}</p></div>
     <div><h4>Approach</h4><p>{esc(p["solution"])}</p></div>
