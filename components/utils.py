@@ -45,18 +45,18 @@ def read_css(filename: str) -> str:
 
 THEMES = {
     "dark": {
-        "bg": "#070A12", "surface": "#0D1421", "elevated": "#121D2D",
-        "text": "#F2F7FA", "muted": "#91A2B5", "accent": "#65E7DF",
-        "accent-soft": "rgba(101,231,223,.10)", "line": "rgba(143,169,190,.15)",
-        "nav-bg": "rgba(7,10,18,.82)", "glow": "rgba(101,231,223,.13)",
-        "shadow": "0 28px 80px -34px rgba(0,0,0,.82)", "on-accent": "#061312",
+        "bg": "#080B12", "surface": "#101722", "elevated": "#151F2C",
+        "text": "#F5F7FA", "muted": "#A0ACBA", "accent": "#8ADBD2",
+        "accent-soft": "rgba(138,219,210,.09)", "line": "rgba(190,205,220,.13)",
+        "nav-bg": "rgba(8,11,18,.78)", "glow": "rgba(138,219,210,.10)",
+        "shadow": "0 30px 90px -42px rgba(0,0,0,.78)", "on-accent": "#071311",
     },
     "light": {
-        "bg": "#F8FAFC", "surface": "#FFFFFF", "elevated": "#EEF2F8",
-        "text": "#111827", "muted": "#4B5A70", "accent": "#087F83",
-        "accent-soft": "rgba(8,127,131,.10)", "line": "rgba(17,24,39,.12)",
-        "nav-bg": "rgba(248,250,252,.82)", "glow": "rgba(8,127,131,.12)",
-        "shadow": "0 24px 60px -28px rgba(17,24,39,.28)", "on-accent": "#FFFFFF",
+        "bg": "#F5F6F8", "surface": "#FFFFFF", "elevated": "#EEF1F4",
+        "text": "#11151C", "muted": "#596575", "accent": "#287F79",
+        "accent-soft": "rgba(40,127,121,.08)", "line": "rgba(17,24,39,.10)",
+        "nav-bg": "rgba(245,246,248,.82)", "glow": "rgba(40,127,121,.09)",
+        "shadow": "0 24px 64px -32px rgba(17,24,39,.22)", "on-accent": "#FFFFFF",
     },
 }
 

@@ -748,3 +748,281 @@ to { opacity: 1; transform: none; }
   .stApp .typewrite::after { display: none !important; }
   .stApp .project-logo-shell { transition: none !important; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MSA SIGNATURE / APPLE-INSPIRED FUTURISM
+   Deliberately quiet: editorial type, mineral accents, precise motion.
+   ═══════════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+.stApp, .stApp .stMarkdown, .stApp .stMarkdown p {
+  font-family: 'DM Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+  font-family: 'Manrope', 'Space Grotesk', sans-serif;
+  letter-spacing: -.045em;
+}
+.stApp .topnav {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom-color: color-mix(in srgb, var(--line) 72%, transparent);
+  box-shadow: 0 8px 36px -30px rgba(0,0,0,.32);
+}
+.stApp .brand .mark {
+  border-radius: 13px;
+  background: linear-gradient(145deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #AAB8C8));
+  box-shadow: 0 5px 22px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.stApp .navlinks a {
+  font-size: 13px;
+  letter-spacing: -.01em;
+  transition: color .25s ease, background .25s ease, transform .25s ease;
+}
+.stApp .navlinks a:hover { transform: translateY(-1px); }
+.stApp .hero {
+  min-height: min(940px, 100svh);
+  padding-top: 142px;
+  padding-bottom: 92px;
+  gap: clamp(36px, 6vw, 88px);
+}
+.stApp .hero h1 {
+  max-width: 780px;
+  font-size: clamp(3.1rem, 7.8vw, 7rem);
+  line-height: .94;
+  letter-spacing: -.075em;
+  font-weight: 800;
+  text-wrap: balance;
+}
+.stApp .hero .grad {
+  background: linear-gradient(110deg, var(--text) 8%, var(--accent) 70%, #A6B9D9 110%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.stApp .eyebrow {
+  font-size: 10px;
+  letter-spacing: .22em;
+  opacity: .92;
+}
+.stApp .subtitle {
+  max-width: 38ch;
+  margin-top: 28px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  line-height: 1.48;
+  letter-spacing: -.035em;
+}
+.stApp .intro {
+  max-width: 54ch;
+  font-size: 1rem;
+  line-height: 1.82;
+}
+.stApp .role-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.stApp .role-prefix { opacity: .76; }
+.stApp .role-rotator {
+  position: relative;
+  display: inline-block;
+  min-width: 178px;
+  height: 1.55em;
+  overflow: hidden;
+  color: var(--accent);
+  font-weight: 600;
+}
+.stApp .role-rotator span {
+  position: absolute;
+  inset: 0 auto auto 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  border-right: 1px solid var(--accent);
+  animation: msa-role-type 12s steps(26, end) infinite;
+}
+.stApp .role-rotator span:nth-child(1) { animation-delay: 0s; }
+.stApp .role-rotator span:nth-child(2) { animation-delay: 3s; }
+.stApp .role-rotator span:nth-child(3) { animation-delay: 6s; }
+.stApp .role-rotator span:nth-child(4) { animation-delay: 9s; }
+@keyframes msa-role-type {
+  0% { width: 0; opacity: 1; }
+  18% { width: 100%; opacity: 1; }
+  22% { width: 100%; opacity: 1; }
+  24% { width: 100%; opacity: 0; }
+  25%, 100% { width: 0; opacity: 0; }
+}
+.stApp .hero-note {
+  max-width: 540px;
+  padding-left: 14px;
+  border-left: 1px solid var(--accent);
+  margin-top: 25px;
+  color: var(--muted);
+}
+.stApp .frame {
+  border-radius: 34px;
+  padding: 9px;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 12%, var(--surface)), var(--surface) 52%);
+  box-shadow: 0 34px 100px -58px var(--accent), var(--shadow);
+}
+.stApp .portrait { border-radius: 26px; }
+.stApp .orbit { opacity: .48; }
+.stApp .tag {
+  border-radius: 999px;
+  padding: 11px 16px;
+  font-size: 12px;
+  box-shadow: 0 14px 40px -28px rgba(0,0,0,.55);
+}
+.stApp .btn {
+  border-radius: 999px;
+  padding: 13px 21px;
+  font-size: 14px;
+  letter-spacing: -.01em;
+}
+.stApp .btn.primary {
+  box-shadow: 0 8px 26px -16px var(--accent);
+}
+.stApp .btn.primary:hover, .stApp .btn.ghost:hover {
+  transform: translateY(-3px);
+}
+.stApp .sec { padding-top: clamp(94px, 12vw, 156px); }
+.stApp .sec-head {
+  max-width: 850px;
+  margin-bottom: 54px;
+}
+.stApp .kicker {
+  font-size: 10px;
+  letter-spacing: .22em;
+}
+.stApp .sec-head h2 {
+  font-size: clamp(2.25rem, 5.1vw, 4.25rem);
+  line-height: 1.02;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+.stApp .lead {
+  max-width: 64ch;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+.stApp .about-grid { gap: clamp(30px, 6vw, 84px); }
+.stApp .prose p { line-height: 1.9; }
+.stApp .pillar, .stApp .card, .stApp .tl-card {
+  border-radius: 22px;
+  transition: transform .45s cubic-bezier(.2,.75,.25,1),
+              border-color .35s ease, box-shadow .45s ease, background .35s ease;
+}
+.stApp .pillar:hover, .stApp .card:hover, .stApp .tl-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px -44px var(--accent);
+}
+.stApp .skill {
+  border-radius: 999px;
+  padding: 8px 14px;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.stApp .skill:hover {
+  transform: translateY(-3px) scale(1.025);
+  background: var(--accent-soft);
+}
+.stApp .flagship, .stApp .project {
+  border-radius: 26px;
+  overflow: hidden;
+  transition: transform .5s cubic-bezier(.2,.75,.25,1),
+              border-color .35s ease, box-shadow .5s ease;
+}
+.stApp .flagship:hover, .stApp .project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 85px -58px var(--accent);
+}
+.stApp .flag-body, .stApp .p-body { padding: clamp(28px, 4vw, 52px); }
+.stApp .flag-body h3, .stApp .p-body h3 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  letter-spacing: -.06em;
+}
+.stApp .vision {
+  padding: clamp(100px, 14vw, 180px) 0;
+}
+.stApp .vision-in h2 {
+  font-size: clamp(2.5rem, 6vw, 5.1rem);
+  letter-spacing: -.07em;
+}
+.stApp .contact { padding-top: clamp(100px, 14vw, 170px); }
+.stApp .contact-card {
+  border-radius: 32px;
+  padding: clamp(48px, 8vw, 92px) 28px;
+}
+.stApp .contact-card h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -.07em;
+}
+.stApp .foot { letter-spacing: -.01em; }
+
+/* Scroll reveal: native view timelines where supported, readable fallback elsewhere. */
+@keyframes msa-reveal-up {
+  from { opacity: 0; transform: translate3d(0, 34px, 0); filter: blur(5px); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+}
+@supports (animation-timeline: view()) {
+  .stApp .reveal {
+    animation: msa-reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 42%;
+  }
+}
+.stApp .reveal-stagger:nth-child(2) { animation-delay: .07s; }
+.stApp .reveal-stagger:nth-child(3) { animation-delay: .14s; }
+.stApp .reveal-stagger:nth-child(4) { animation-delay: .21s; }
+.stApp .reveal-stagger:nth-child(5) { animation-delay: .28s; }
+
+/* Character-by-character section copy, triggered by scroll position. */
+.stApp .typewrite {
+  display: inline-block;
+  max-width: 100%;
+  clip-path: inset(0 100% 0 0);
+  border-right: 1px solid var(--accent);
+  padding-right: 3px;
+  animation: msa-copy-reveal 3.8s steps(var(--steps, 60), end) both;
+  animation-timeline: view();
+  animation-range: entry 8% cover 34%;
+}
+@keyframes msa-copy-reveal { to { clip-path: inset(0 0 0 0); } }
+@supports not (animation-timeline: view()) {
+  .stApp .typewrite { clip-path: none; border-right: 0; animation: none; }
+}
+.stApp .typewrite::after { content: none !important; }
+.stApp .vision-type, .stApp .contact-type { display: block; width: fit-content; }
+
+/* Subtle pointer response; no fake cursor or heavy particle canvas. */
+.stApp a, .stApp button, .stApp .pillar, .stApp .card, .stApp .project, .stApp .flagship {
+  -webkit-tap-highlight-color: transparent;
+}
+.stApp a:focus-visible, .stApp button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .stApp .hero { min-height: auto; padding-top: 116px; }
+  .stApp .hero h1 { font-size: clamp(3rem, 10vw, 5.3rem); }
+}
+@media (max-width: 640px) {
+  .stApp .hero { padding-top: 112px; padding-bottom: 52px; }
+  .stApp .role-line { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .stApp .role-rotator { min-width: 190px; }
+  .stApp .typewrite { clip-path: none; border-right: 0; animation: none; }
+  .stApp .sec-head { margin-bottom: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stApp *, .stApp *::before, .stApp *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+  .stApp .typewrite { clip-path: none !important; border: 0 !important; }
+}

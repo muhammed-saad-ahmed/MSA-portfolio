@@ -58,6 +58,15 @@ def hero() -> str:
     <span class="eyebrow rise r1">{esc(d.HERO["eyebrow"])}</span>
     <h1 class="rise r2"><span>Muhammad</span> <span>Saad</span> <span class="grad">Ahmed</span></h1>
     <p class="subtitle rise r3">{esc(d.HERO["subtitle"])}</p>
+    <div class="role-line rise r3" aria-label="Python developer, data engineering enthusiast, aspiring aerospace engineer">
+      <span class="role-prefix">Currently exploring</span>
+      <span class="role-rotator" aria-hidden="true">
+        <span>Python development</span>
+        <span>Data engineering</span>
+        <span>Applied AI</span>
+        <span>Aerospace systems</span>
+      </span>
+    </div>
     <p class="intro rise r4">{esc(d.HERO["intro"])}</p>
     <div class="hero-note rise r4"><span class="note-index">01 / APPROACH</span><span>Understand the problem. Build with evidence. Keep improving.</span></div>
     <div class="btn-row rise r5">
@@ -83,7 +92,7 @@ def hero() -> str:
 def about() -> str:
     paras = "".join(f'<p class="typewrite" style="--steps:{max(12, min(len(p), 88))}">{esc(p)}</p>' for p in d.ABOUT["paragraphs"])
     pillars = "".join(
-        f'<div class="pillar"><span class="num">0{i}</span><h3>{esc(t)}</h3><p>{esc(s)}</p></div>'
+        f'<div class="pillar reveal-stagger"><span class="num">0{i}</span><h3>{esc(t)}</h3><p>{esc(s)}</p></div>'
         for i, (t, s) in enumerate(d.ABOUT["pillars"], 1)
     )
     return clean(f"""
@@ -102,7 +111,7 @@ def expertise() -> str:
     cards = []
     for cat, items in d.SKILLS:
         pills = "".join(f'<span class="skill {lvl}">{esc(n)}</span>' for n, lvl in items)
-        cards.append(f'<article class="card skillcard reveal"><h3>{esc(cat)}</h3><div class="skills">{pills}</div></article>')
+        cards.append(f'<article class="card skillcard reveal reveal-stagger"><h3>{esc(cat)}</h3><div class="skills">{pills}</div></article>')
     legend = (
         '<div class="legend reveal"><span><i class="dot practical"></i>Used in projects</span>'
         '<span><i class="dot training"></i>Learned in training, building experience</span>'
@@ -269,7 +278,7 @@ def education() -> str:
 # ---------------------------------------------------------------- achievements
 def achievements() -> str:
     cards = "".join(
-        f'<article class="card ach reveal"><span class="num">0{i}</span><h3>{esc(t)}</h3><p>{esc(s)}</p></article>'
+        f'<article class="card ach reveal reveal-stagger"><span class="num">0{i}</span><h3>{esc(t)}</h3><p>{esc(s)}</p></article>'
         for i, (t, s) in enumerate(d.ACHIEVEMENTS, 1)
     )
     certs = ""
